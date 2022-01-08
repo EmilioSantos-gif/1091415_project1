@@ -24,7 +24,7 @@ namespace API.Controllers
 
         // GET: api/Multas/5
         [ResponseType(typeof(Multa))]
-        public IHttpActionResult GetMulta(string id)
+        public IHttpActionResult GetMulta(Guid id)
         {
             Multa multa = db.Multa.Find(id);
             if (multa == null)
@@ -105,7 +105,7 @@ namespace API.Controllers
 
         // DELETE: api/Multas/5
         [ResponseType(typeof(Multa))]
-        public IHttpActionResult DeleteMulta(string id)
+        public IHttpActionResult DeleteMulta(Guid id)
         {
             Multa multa = db.Multa.Find(id);
             if (multa == null)
